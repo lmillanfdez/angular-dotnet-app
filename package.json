@@ -1,0 +1,21 @@
+{
+  "name": "angular-dotnet-app",
+  "version": "1.0.0",
+  "description": "ASP.NET MVC application using Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "asp.net",
+    "mvc",
+    "web",
+    "development",
+    "angular",
+    "typescript"
+  ],
+  "author": "Liander Millan",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
