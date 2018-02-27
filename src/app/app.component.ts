@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
 
 @Component({
+    moduleId: module.id,
     selector: "main-component",
-    template: "<div>Environment set up done...</div>"
+    templateUrl: "./app.template.html"
 })
 export class AppComponent{
 
