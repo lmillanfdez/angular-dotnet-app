@@ -4,9 +4,10 @@
   "description": "ASP.NET MVC application using Angular",
   "scripts": {
     "test": "test",
-    "build": "tsc -p ./src -w",
+    "build": "tsc -p ./src",
+    "build:watch": "tsc -p ./src -w",
     "lite-server": "lite-server -c=bs-config.json",
-    "start": "concurrently \"npm run build\" \"npm run lite-server\""
+    "start": "concurrently \"npm run build:watch\" \"npm run lite-server\""
   },
   "keywords": [
     "asp.net",
@@ -19,6 +20,7 @@
   "author": "Liander Millan",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^9.4.6",
     "concurrently": "^3.5.1",
     "lite-server": "^2.3.0",
     "typescript": "^2.7.1"
@@ -33,6 +35,7 @@
     "@angular/platform-browser-dynamic": "^5.2.3",
     "@angular/router": "^5.2.3",
     "angular-in-memory-web-api": "^0.5.3",
+    "bootstrap": "^4.0.0",
     "core-js": "^2.5.3",
     "rxjs": "^5.5.6",
     "systemjs": "^0.20.19",
