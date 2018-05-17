@@ -9,9 +9,15 @@ import { TodoService } from "../services/facade";
     templateUrl: "./todos-list.template.html"
 })
 export class TodosListComponent{
-    todosList: Todo[];
+    todosList: Todo[] = [];
 
     constructor(todosService: TodoService){
-        this.todosList = todosService.getTodos();
+        // todosService.getTodosWithHttp().then(response => { 
+        //     this.todosList = response;
+        // });
+
+        todosService.getTodosWithHttp().subscribe(response => { 
+            this.todosList = response.json().data;
+        });
     }
 }

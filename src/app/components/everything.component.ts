@@ -1,17 +1,16 @@
 import { Component } from "@angular/core";
-import { Router, ActivatedRoute, ActivatedRouteSnapshot, Params } from "@angular/router"
+import { ActivatedRoute } from "@angular/router"
 
 @Component({
     moduleId: module.id,
     selector: "everything-pizza",
-    templateUrl: "./everything.template.html",
-    providers: [ActivatedRoute]
+    templateUrl: "./everything.template.html"
 })
 export class EverythingComponent{
-    private size: String = "";
+    private size: String = "large";
 
     constructor(private route: ActivatedRoute){
-        route.params.subscribe((params: Params) => {
+        route.params.subscribe((params) => {
             this.size = params["size"];
         });
     }
